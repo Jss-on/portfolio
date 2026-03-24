@@ -3,644 +3,457 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jession Diwangan</title>
+    <title>Jession Diwangan — AI Systems Engineer</title>
     <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            background: #fff;
-            color: #000;
-            font-family: 'Helvetica Neue', Arial, sans-serif;
+        :root {
+            --bg: #fafafa;
+            --card: #ffffff;
+            --text: #1a1a1a;
+            --muted: #666;
+            --accent: #2563eb;
+            --accent2: #7c3aed;
+            --border: #e5e7eb;
+            --tag-bg: #f3f4f6;
         }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
 
-
-        .header {
+        /* Hero */
+        .hero {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 24px 40px;
             text-align: center;
-            margin-bottom: 20px; /* Add space below the header */
         }
-
-        .header img {
-            border-radius: 50%;
-            margin-bottom: 20px; /* Adjust as needed */
-            display: block; /* Makes the image center in its container */
-            margin-left: auto;
-            margin-right: auto;
+        .hero img {
+            width: 140px;
+            height: 140px;
+            border-radius: 70px;
+            object-fit: cover;
+            border: 3px solid var(--border);
+            margin-bottom: 20px;
         }
-
-        .header-info {
-            display: inline-block;
+        .hero h1 {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
         }
-
-        .name {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .tagline {
+        .hero .tagline {
             font-size: 18px;
-            color: #555;
+            color: var(--muted);
+            margin: 4px 0 16px;
+            font-weight: 400;
         }
-
-        .contact-info {
+        .hero .links {
             display: flex;
             justify-content: center;
-            margin-top: 8px;
+            gap: 16px;
+            margin-bottom: 16px;
         }
-
-        .contact-info a {
-            margin: 0 10px; /* Adds spacing between icons */
-        }
-
-        .contact-info img {
-            height: 24px; /* Example size, adjust based on actual icon sizes */
-        }
-        /* Add styles for your social media icons here */
-        .timeline {
-        position: relative;
-        padding-left: 50px;
-        margin-top: 20px;
-        }
-
-        .timeline:before {
-        content: '';
-        position: absolute;
-        left: 20px;
-        width: 2px;
-        height: 100%;
-        background: #d4d9df;
-        }
-
-        .timeline-item {
-        display: flex;
-        align-items: center;
-        margin-bottom: 20px;
-        }
-
-        
-        .timeline-icon {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background: #f4f6f8;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        }
-
-        .timeline-icon img {
-        width: 24px; /* Adjust size as needed */
-        }
-
-        .timeline-content {
-        margin-left: 60px;
-        background: #f4f6f8;
-        padding: 10px;
-        border-radius: 3px;
-        }
-
-        .timeline-content h3 {
-        margin-top: 0;
-        }
-
-        .container {
-            margin-left: auto;
-            margin-right: auto;
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-        
-        .row {
+        .hero .links a {
             display: flex;
-            align-items: flex-start; /* Aligns items to the top of the container */
-        }
-                
-
-        .timespan {
-            flex: 0 0 10%; /* Adjust the width as needed */
-            text-align: center; /* Center the timespan text */
-            }
-        .ico {
-            flex: 0 0 80px; /* Adjust the width as needed */
-            position: relative; /* For the dot to be positioned absolutely within this container */
-            }
-
-       
-
-        .desc {
-            flex: 1; /* Take the remaining space */
-            text-align: justify;
-            padding: 0 15px; /* Add padding to create the indentation effect */
-            }
-
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-        .hassets {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px; /* Adjust the space between assets */
-        }
-        .hasset {
-            flex-basis: calc(50% - 10px); /* Adjust the width for two items per row, subtracting the gap */
-        }
-        video, .hasset img {
-            width: 100%;
-            max-width: 100%;
-            height: auto;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: white;
-            font-family: sans-serif;
-            font-size: 16px;
-            line-height: 1.4;
-            color: #333;
-        }
-
-        /* Layout */
-        .container {
-            margin-left: auto;
-            margin-right: auto;
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-        @media (min-width: 992px) {
-            .container {
-                width: 970px;
-            }
-        }
-        /* .row {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-        } */
-
-        /* Props */
-        #dhead {
-            margin-top: 20px;
-        }
-        #dpic {
-            grid-column: span 6;
-            text-align: right;
-        }
-        #ddesc {
-            padding-top: 40px;
-            padding-left: 20px;
-            grid-column: span 6;
-        }
-        @media (max-width: 991px) {
-            #dpic {
-            grid-column: span 12;
-            text-align: center;
-            }
-            #ddesc {
-            grid-column: span 12;
-            padding-top: 20px;
-            text-align: center;
-            }
-        }
-        h1 {
-            font-size: 34px;
-            font-weight: normal;
-            padding: 0;
-            margin: 0;
-        }
-        h2 {
-            font-weight: normal;
-            font-style: italic;
-            color: #999;
-            font-size: 18px;
-            padding: 0;
-            margin: 5px 0 10px 0;
-        }
-        @media (min-width: 992px) {
-            h2 {
-                max-width: 300px;
-            }
-        }
-        #dpic img {
-            width: 240px;
-            height: 240px;
-            border-radius: 120px;
-        }
-        .iico {
-            width: 40px;
-            height: 40px;
-        }
-        #demail {
-            margin-top: 10px;
-            color: #555;
-            opacity: 0;
-            transition: opacity 0.7s;
-        }
-        hr {
-            height: 1px;
-            background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
-            background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
-            background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
-            background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
-            padding: 0;
-            margin: 20px 0px 20px 0px;
-            border: 0;
-        }
-        .ico {
-            grid-column: span 1;
-            vertical-align: top;
-            border-left: 2px solid #cfcfcf;
-            position: relative;
             align-items: center;
-        }
-        .ico img {
-            border-radius: 1px;
-            width: 100%;
-            max-width: 80px;
-            margin-left: 10px;
-            
-        }
-        .desc {
-            grid-column: span 10;
-            vertical-align: top;
-            font-size: 17px;
-            padding-left: 20px;
-            padding-bottom: 20px;
-            text-align: justify;
-        }
-        
-        .entry-dot {
-            position: absolute;
-            top: 0px;
-            left: -8px;
-            width: 10px;
-            height: 10px;
-            border-radius: 7px;
-            background-color: #cfcfcf;
-            border: 2px solid white;
-            margin-bottom: 0px;
-        }
-        .timespan {
-            grid-column: span 1;
+            gap: 6px;
             font-size: 14px;
-            text-align: right;
-            padding-right: 5px;
-            color: #bbb;
+            color: var(--muted);
+            transition: color 0.15s;
         }
-        .hassets {
-            position: relative;
+        .hero .links a:hover { color: var(--accent); text-decoration: none; }
+        .hero .links img { width: 20px; height: 20px; opacity: 0.7; }
+        .resume-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 24px;
+            background: var(--accent);
+            color: #fff;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.15s;
+            text-decoration: none;
         }
-        @media (max-width: 991px) {
-            .hassets {
-                display: none;
-            }
+        .resume-btn:hover { background: #1d4ed8; text-decoration: none; }
+
+        /* Container */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
         }
-        .hasset {
+
+        /* Section */
+        .section { margin-bottom: 48px; }
+        .section-title {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 24px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        /* Timeline */
+        .timeline { position: relative; padding-left: 40px; }
+        .timeline::before {
+            content: '';
             position: absolute;
-            margin: 0;
-            padding: 0;
+            left: 15px;
+            top: 8px;
+            bottom: 0;
+            width: 2px;
+            background: var(--border);
         }
-        .ctitle {
-            font-size: 36px;
+        .entry { position: relative; margin-bottom: 36px; }
+        .entry .dot {
+            position: absolute;
+            left: -33px;
+            top: 6px;
+            width: 12px;
+            height: 12px;
+            border-radius: 6px;
+            background: var(--border);
+            border: 2px solid var(--bg);
+        }
+        .entry.highlight .dot { background: var(--accent); }
+        .entry .logo {
+            position: absolute;
+            left: -56px;
+            top: -2px;
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: #fff;
+            object-fit: contain;
+            padding: 2px;
+        }
+        .entry-with-logo { padding-left: 12px; }
+        .entry h3 { font-size: 17px; font-weight: 600; margin-bottom: 2px; }
+        .entry .meta {
+            font-size: 14px;
+            color: var(--muted);
+            margin-bottom: 8px;
+        }
+        .entry .meta .company { font-weight: 500; color: var(--text); }
+        .entry p, .entry ul { font-size: 15px; color: #444; }
+        .entry ul { padding-left: 20px; }
+        .entry li { margin-bottom: 6px; }
+
+        /* Key Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        @media (max-width: 600px) {
+            .projects-grid { grid-template-columns: 1fr; }
+        }
+        .project-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            transition: border-color 0.15s, box-shadow 0.15s;
+        }
+        .project-card:hover {
+            border-color: var(--accent);
+            box-shadow: 0 4px 12px rgba(37,99,235,0.08);
+        }
+        .project-card h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .project-card .tech {
+            font-size: 12px;
+            color: var(--accent2);
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        .project-card p { font-size: 14px; color: var(--muted); }
+
+        /* Pet Projects */
+        .pet-project {
+            display: flex;
+            gap: 16px;
             margin-bottom: 20px;
-            margin-top: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border);
         }
-        #featured-talks .row {
-            grid-column-gap: 10px;
-            grid-row-gap: 10px;
-            padding-bottom: 30px;
+        .pet-project:last-child { border-bottom: none; }
+        .pet-project img {
+            width: 64px;
+            height: 64px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            object-fit: cover;
+            flex-shrink: 0;
         }
-        .card {
-            grid-column: span 3;
-            vertical-align: top;
-            background-color: #eee;
-            border: 1px solid #ddd;
-            border-radius: 3px;
-            padding: 5px;
-            background-color: white;
-            padding-bottom: 10px;
-        }
-        @media (max-width: 991px) {
-            .card {
-                grid-column: span 6;
-            }
-            #featured-talks .row {
-                grid-column-gap: 5px;
-                grid-row-gap: 5px;
-            }
-        }
-        .card img {
-            border-radius: 1px;
-            width: 100%;
-        }
-        .cdesc {
-            height: 30px;
-            vertical-align: top;
-            margin-bottom: 10px;
-            font-size: 15px;
-        }
-        @media (max-width: 768px) {
-            .cdesc {
-                font-size: 14px;
-                padding-bottom: 10px;
-            }
-        }
-        #pet-projects .row {
-            grid-column-gap: 10px;
-            grid-row-gap: 10px;
-        }
-        .project {
-            margin-bottom: 10px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #eee;
-        }
-        .pico {
-            float: left;
-            margin-right: 10px;
-        }
-        .pdesc {
-        }
-        .pend {
-            clear: both;
-        }
-        .pico img {
-            height: 80px;
-            border-radius: 5px;
-            border: 1px solid #999;
-        }
-        .pub {
+        .pet-project h4 { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+        .pet-project p { font-size: 14px; color: var(--muted); }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 8px 16px;
             font-size: 14px;
-            border-left: 4px solid #aaa;
-            padding: 2px 0px 2px 10px;
-            margin-bottom: 10px;
         }
-        .pub-title {
-            display: inline;
-            color: #333;
+        .skills-grid .label {
+            font-weight: 600;
+            color: var(--text);
+            padding-top: 2px;
         }
-        .pub-venue {
-            display: inline;
-            color: #090;
+        .skills-grid .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+        .tag {
+            background: var(--tag-bg);
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-size: 13px;
+            color: #555;
         }
-        .pub-authors {
-            display: block;
-            color: #900;
-        }
-        .tul {
+
+        /* Misc */
+        .misc ul { padding-left: 20px; font-size: 15px; color: #444; }
+        .misc li { margin-bottom: 8px; }
+
+        /* Footer */
+        .footer {
             text-align: center;
-            padding: 0;
+            padding: 40px 24px;
+            font-size: 13px;
+            color: #aaa;
         }
-        .til {
-            display: inline-block;
-            padding: 3px 15px 3px 15px;
-            margin-bottom: 5px;
-        }
-        .tilb {
-            border-right: 1px solid #ccc;
-        }
-        .nodot {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        /* Additional styles for images and videos if included */
-        .small-image {
-        width: 100px; /* or any other size */
-        height: auto;
-        border-radius: 1%
-    }
 
-    .pet-projects h2 {
-        font-size: 24px;
-        margin-bottom: 15px;
-        
-    }
-    .pet-projects {
-        margin-top: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* This will center the child elements */
-    }
-
-   
-
-
-    .project {
-        margin-bottom: 20px;
-    }
-
-    .project-image {
-        float: left;
-        margin-right: 15px;
-        width: 100px; /* Adjust as needed */
-        height: auto;
-        border-radius: 1px; /* Set border radius to 1px */
-    }
-
-    .project-description {
-        text-align: left;
-        margin-left: 120px; /* Adjust based on image width */
-        font-size: 16px;
-    }
-
-    /* Clearfix */
-    .project:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-
-    .container.pet-projects {
-    /* If you want to limit the width of the entire pet projects section, you can add: */
-    max-width: 800px; /* Adjust this value as needed */
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .project-description ul {
-        padding-left: 20px; /* Adjusts the indentation of the list */
-        list-style-type: disc; /* Default bullet style, change as needed */
-    }
-
-    .project-description li {
-        margin-bottom: 10px; /* Adds space between list items */
-    }
-
-
-
+        /* Education */
+        .edu { font-size: 15px; }
+        .edu .degree { font-weight: 600; }
+        .edu .school { color: var(--muted); }
     </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-   
-
-    <div class="header">
-        <img src="assets/me-new.jpg" alt="Jession Diwangan" width="200" height="200"> <!-- Replace with your image path -->
-        <div class="header-info">
-            <div class="name">Jession Diwangan</div>
-            <div class="tagline">AI Engineer</div>
-            <div class="contact-info">
-                <!-- Replace with your actual links and icon images -->
-                <a href="https://github.com/Jss-on" target="_blank"><img src="assets/github-logo.png" alt="GitHub"></a>
-                <a href="https://linkedin.com/in/jession-diwangan-a9162a16b" target="_blank"><img src="assets/linkedin-logo.png" alt="LinkedIn"></a>
-                <a href="mailto:jessiondiwangan@gmail.com"><img src="assets/email-logo.png" alt="Email"></a>
-                <a href="https://www.kaggle.com/tensordt" target="_blank"><img src="assets/kaggle-logo.png" alt="Kaggle"></a>
-                <a href="https://huggingface.co/Jession01" target="_blank"><img src="assets/hg.png" alt="Huggingface"></a>
-            </div>
+    <!-- Hero -->
+    <div class="hero">
+        <img src="assets/me-new.jpg" alt="Jession Diwangan">
+        <h1>Jession Diwangan</h1>
+        <div class="tagline">AI Systems Engineer</div>
+        <div class="links">
+            <a href="https://github.com/Jss-on" target="_blank"><img src="assets/github-logo.png" alt="">GitHub</a>
+            <a href="https://linkedin.com/in/jession-diwangan-a9162a16b" target="_blank"><img src="assets/linkedin-logo.png" alt="">LinkedIn</a>
+            <a href="mailto:jessiondiwangan@gmail.com"><img src="assets/email-logo.png" alt="">Email</a>
+            <a href="https://www.kaggle.com/tensordt" target="_blank"><img src="assets/kaggle-logo.png" alt="">Kaggle</a>
+            <a href="https://huggingface.co/Jession01" target="_blank"><img src="assets/hg.png" alt="">HuggingFace</a>
         </div>
-        <hr>
-    
-
-        
-
-        
+        <a href="assets/resume.tex" download class="resume-btn">📄 Download Resume</a>
     </div>
 
+    <div class="container">
 
-    <div id="history" class="container">
-        <!-- Repeat this block for each entry in your history -->
-        <!-- First entry -->
-        <div class="entry row">
-            <div class="timespan">
-               <b>MFG Eng for Data Science</b>
-               <br>
-               <i>Jan 2023 - March 2024 </i> 
-            </div>
-            <div class="ico">
-                <div class="entry-dot"></div>
-                <img src="assets/adi-logo.png" alt="Analog Devices, Inc Logo"> <!-- Replace with your actual logo -->
-            </div>
-            <div class="desc">
-                As the lead developer, I led the creation of a <b>Machine health monitoring system</b> using a <b>ensemble model
-                trained</b> trained on audio data to <b>automate monitoring and prevent IC package cracks</b>, deployed on Orangepi SBC.
-                <br>
-                <br>
-                Developed a Selenium-based <b>automated allocation tool</b>, reducing <b>98%</b> of manual planning allocation
-                and <b>saving three days of work weekly</b>, supporting planners across Philippines and Thailand. Deployed
-                on enterprise servers.
-                <br>
-                <br>
-                Developed a <b>vision system with yolov8</b> for <b>automated IC counting </b> in trays using Jetson Nano as the
-                hardware, <b>eliminating manual checks</b> and <b>identifying misoriented units</b>.
-                <br>
-                <br>
-                Developed a <b>RAG chatbot</b> to enhance knowledge and information retrieval for equipment engineers,
-                improving efficiency in equipment repairs and technical reviews.
-                <br>
-                
+        <!-- Experience -->
+        <div class="section">
+            <div class="section-title">Experience</div>
+            <div class="timeline">
+
+                <div class="entry highlight">
+                    <div class="dot"></div>
+                    <h3>AI Systems Engineer</h3>
+                    <div class="meta"><span class="company">Independent</span> · Remote · Mar 2025 – Present</div>
+                    <ul>
+                        <li>Built a <b>3-agent orchestration system</b> on OpenClaw — manager, researcher, and builder agents coordinating autonomously via session tools with human approval gates.</li>
+                        <li>Designed a <b>custom RAG server in Rust</b> with LanceDB, Gemini Embedding 2 (multimodal), hybrid search (vector + BM25), Weibull decay, noise filtering, and per-page PDF ingestion.</li>
+                        <li>Integrated <b>Gmail automation</b> (OAuth2, Pub/Sub push notifications) and multi-platform messaging (Telegram, Discord) with channel-based agent routing.</li>
+                        <li>Built <b>Sharingan</b>, a zero-shot vision system using SigLIP2 on CUDA with REST API for real-time image classification.</li>
+                        <li>Implemented agent-to-agent communication protocols, context injection pipelines, and dynamic memory retrieval.</li>
+                    </ul>
+                </div>
+
+                <div class="entry">
+                    <div class="dot"></div>
+                    <h3>Agent Developer</h3>
+                    <div class="meta"><span class="company">Arkpad</span> · Makati, Philippines · Jun 2024 – Feb 2025</div>
+                    <ul>
+                        <li>Developed an <b>autonomous LinkedIn outreach agent</b> automating personalized connection requests and follow-up messaging with human-in-the-loop quality control.</li>
+                        <li>Designed a <b>Sales Agent SaaS</b> using LangGraph — multi-agent workflows with Agentic RAG, persistent memory, and Facebook Messenger integration.</li>
+                    </ul>
+                </div>
+
+                <div class="entry">
+                    <div class="dot"></div>
+                    <h3>AI Engineer</h3>
+                    <div class="meta"><span class="company">TresCivil</span> · New South Wales, Australia · Dec 2023 – Mar 2024</div>
+                    <ul>
+                        <li>Designed an <b>agentic chatbot</b> using LangGraph with database querying, local document processing, code execution, and internet access capabilities.</li>
+                    </ul>
+                </div>
+
+                <div class="entry entry-with-logo">
+                    <img src="assets/adi-logo.png" alt="ADI" class="logo">
+                    <div class="dot"></div>
+                    <h3>MFG Engineer for Data Science</h3>
+                    <div class="meta"><span class="company">Analog Devices, Inc</span> · General Trias, Cavite · Jan 2022 – Mar 2024</div>
+                    <ul>
+                        <li>Built a <b>tester health monitoring system</b> using ensemble audio ML models deployed on OrangePi SBC to prevent IC package cracks.</li>
+                        <li>Created Selenium-based <b>automated allocation tool</b>, eliminating 98% of manual planning and <b>saving 3 days/week</b> for planners across Philippines and Thailand.</li>
+                        <li>Developed a <b>vision system with YOLOv8</b> for automated IC counting using Jetson Nano.</li>
+                        <li>Implemented a <b>RAG chatbot</b> for technical information retrieval, improving efficiency in equipment repairs.</li>
+                    </ul>
+                </div>
+
+                <div class="entry entry-with-logo">
+                    <img src="assets/adi-logo.png" alt="ADI" class="logo">
+                    <div class="dot"></div>
+                    <h3>Test Development Engineer</h3>
+                    <div class="meta"><span class="company">Analog Devices, Inc</span> · General Trias, Cavite · Nov 2019 – Jan 2022</div>
+                    <ul>
+                        <li>Developed test solutions for <b>Simultaneous Sampling SAR ADC converters</b> from characterization to manufacturing.</li>
+                        <li>Built an <b>automated Flex Patterns Translator</b>, reducing debugging from months to hours.</li>
+                        <li>Trained <b>LGBM model</b> to predict parameter shifts under temperature, optimizing manufacturing test time.</li>
+                    </ul>
+                </div>
+
+                <div class="entry entry-with-logo">
+                    <img src="assets/xu-logo.png" alt="XU" class="logo">
+                    <div class="dot"></div>
+                    <h3>BS Electronics Engineering</h3>
+                    <div class="meta"><span class="company">Xavier University – Ateneo de Cagayan</span> · 2014 – 2019</div>
+                    <p>Graduated <i>cum laude</i>. Built a wireless cashierless POS system for final year project. Licensed Electronics Engineer.</p>
+                </div>
+
             </div>
         </div>
 
-        <div class="entry row">
-            <div class="timespan">
-                <b>Test Dev Eng</b>
-                <br>
-                <i>Nov 2019 - Jan 2023</i>
+        <!-- Key Projects -->
+        <div class="section">
+            <div class="section-title">Key Projects</div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h4>RAG Experience Server</h4>
+                    <div class="tech">Rust · LanceDB · Gemini · Voyage</div>
+                    <p>Multimodal RAG with hybrid search, Weibull decay, PDF per-page ingestion, 10 API endpoints. Ingested 146-page electronics book in 94 seconds.</p>
+                </div>
+                <div class="project-card">
+                    <h4>OpenClaw Multi-Agent</h4>
+                    <div class="tech">OpenClaw · TypeScript · Discord · Telegram</div>
+                    <p>3-agent system (manager/researcher/builder) with autonomous coordination, multi-channel routing, and human approval gates.</p>
+                </div>
+                <div class="project-card">
+                    <h4>Sharingan</h4>
+                    <div class="tech">Python · SigLIP2 · CUDA · FastAPI</div>
+                    <p>Zero-shot vision system for real-time image/video classification. REST API for security monitoring and event detection.</p>
+                </div>
+                <div class="project-card">
+                    <h4>Trading Systems</h4>
+                    <div class="tech">C++ · Rust · WebSocket · Options Pricing</div>
+                    <p>HFT infrastructure — crypto exchange websocket handlers, options pricing models, automated strategy optimization.</p>
+                </div>
             </div>
-            <div class="ico">
-                <div class="entry-dot"></div>
-                <img src="assets/adi-logo.png" alt="Analog Devices, Inc Logo"> <!-- Replace with your actual logo -->
-            </div>
-            <div class="desc">
-               
-                  <b>Development, Debugging</b>, and <b>Evaluation</b> of Test Solutions from Characterization to Release to Manufacturing for <b>Simultaneous Sampling SAR ADC converters.</b>
-                <br>
-                <br>
-                  Built a <b>Automated Flex Patterns Translator</b> that transforms text pattern files, converting undocumented flex patterns into a clear, formatted output. Aimed at simplifying the <b>pattern analysis process</b> which significantly <b>reduces the amount of debugging work from months to hours</b>. It serves as a solution to <b>manual pattern checking</b>.
-                  <br>
-                <br>
-                Trained a <b>LGBM machine learning model</b> to <b>predict parameter shifts</b> in components under temperature. The goal was to <b>optimize manufacturing testing</b> by eliminating unnecessary temperature stages, resulting in significant <b>time savings</b>.
-                
+        </div>
 
-                
+        <!-- Pet Projects -->
+        <div class="section">
+            <div class="section-title">Side Projects</div>
+
+            <div class="pet-project">
+                <img src="assets/chat-icon.png" alt="Noah">
+                <div>
+                    <h4>noah — AI Sales Representative</h4>
+                    <p>Multi-agent sales system with RAG, web search, and Python sandbox for complex calculations. Integrates intelligent, data-driven sales support.</p>
+                </div>
             </div>
-            
-            
+
+            <div class="pet-project">
+                <img src="assets/act.png" alt="Audio Classifier">
+                <div>
+                    <h4><a href="https://github.com/Jss-on/Audio-Classifier-Trainer">Audio Classifier Trainer</a></h4>
+                    <p>Web app to train audio classifiers using ensemble models on any dataset. Designed for non-coders to build models automatically.</p>
+                </div>
+            </div>
+
+            <div class="pet-project">
+                <img src="assets/idwyp.webp" alt="IDWYP">
+                <div>
+                    <h4><a href="https://github.com/Jss-on/IDWYP">IDWYP</a></h4>
+                    <p>Takes an image and splits it into segments fitting specified paper sizes, compiled into a single PDF.</p>
+                </div>
+            </div>
+
+            <div class="pet-project">
+                <img src="assets/your-face.png" alt="YourFace">
+                <div>
+                    <h4><a href="https://github.com/Jss-on/your-face-ai">YourFace AI</a></h4>
+                    <p>Desktop app for uploading facial images with automatic recognition on subsequent encounters.</p>
+                </div>
+            </div>
         </div>
-        
-        <!-- Second entry -->
-        <div class="entry row">
-            <div class="timespan">
-                <b>Undergrad</b>
-                <br>
-                <i>2013 - 2019 </i> 
-            </div>
-            <div class="ico">
-                <div class="entry-dot"></div>
-                <img src="assets/xu-logo.png" alt="xu logo"> <!-- Replace with your previous position logo -->
-            </div>
-            <div class="desc">
-                Took up BS Electronics and Communication Engineering. We built a wireless system for cashierless POS for our final year project. Graduated cum laude. Electronics Engineering Licensure Exam passer.  <!-- Replace with your actual description -->
+
+        <!-- Skills -->
+        <div class="section">
+            <div class="section-title">Skills & Tools</div>
+            <div class="skills-grid">
+                <div class="label">AI & Agents</div>
+                <div class="tags">
+                    <span class="tag">Multi-Agent Orchestration</span>
+                    <span class="tag">RAG Systems</span>
+                    <span class="tag">Prompt Engineering</span>
+                    <span class="tag">LLM Integration</span>
+                    <span class="tag">Agentic Workflows</span>
+                </div>
+                <div class="label">Languages</div>
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Rust</span>
+                    <span class="tag">C++</span>
+                    <span class="tag">TypeScript</span>
+                    <span class="tag">SQL</span>
+                </div>
+                <div class="label">Platforms</div>
+                <div class="tags">
+                    <span class="tag">OpenClaw</span>
+                    <span class="tag">LangGraph</span>
+                    <span class="tag">LangChain</span>
+                    <span class="tag">n8n</span>
+                    <span class="tag">Docker</span>
+                </div>
+                <div class="label">APIs</div>
+                <div class="tags">
+                    <span class="tag">OpenAI</span>
+                    <span class="tag">Claude</span>
+                    <span class="tag">Gemini</span>
+                    <span class="tag">Voyage AI</span>
+                    <span class="tag">LanceDB</span>
+                </div>
             </div>
         </div>
-        <!-- Continue with other entries... -->
-        <br>
-        <br>
-<!-- </div> -->
-        
-        
-        <!-- Continue with other entries... -->
+
+        <!-- Misc -->
+        <div class="section misc">
+            <div class="section-title">Misc</div>
+            <ul>
+                <li>32nd ASEMEP National Technical Symposium — Team ADI awarded <b>Best Overall Industry Paper</b>. <a href="https://www.facebook.com/photo/?fbid=731366495674145&set=pcb.731373685673426">See here.</a></li>
+                <li>SEAP 2018 participant. <a href="https://imcsap.org/my-experince-in-seap-2018/">Short sharing.</a></li>
+                <li>Featured in ABS-CBN News for graduation. <a href="https://news.abs-cbn.com/news/03/30/19/ip-from-bukidnon-graduates-cum-laude-in-engineering">Article</a>, <a href="https://www.youtube.com/watch?v=9SlRLMMtz_o">Video</a>.</li>
+            </ul>
+        </div>
+
     </div>
-    <!-- Pet Projects Section -->
-    <div class="container pet-projects">
-        <div class="name">Pet Projects</div>
-        <!-- Each project entry -->
 
-        <div class="project">
-            <img src="assets/chat-icon.png" alt="Chat Icon" class="project-image" style="width: 70px; height: auto;">
-            <div class="project-description">
-                Developed <b>noah</b>, an advanced AI sales representative utilizing a multi-agent system. This innovative solution integrates Retrieval-Augmented Generation (RAG), web search capabilities, and a custom-built Python sandbox environment for complex calculations and code execution.
-                Noah seamlessly combines these technologies to provide intelligent, data-driven sales support and problem-solving capabilities.
-            </div>
-        </div>
-        
-        <br>
-        <div class="project">
-            <img src="assets/act.png" alt="act logo" class="project-image" >
-            <div class="project-description">
-                This <b><a href="https://github.com/Jss-on/Audio-Classifier-Trainer">web app</a></b> allows you to train an audio classifier using ensemble models on any audio dataset. It is designed for non coders to build model automatically.
-            </div>
-        </div>
-
-        <div class="project">
-            <img src="assets/idwyp.webp" alt="idwp logo" class="project-image" >
-            <div class="project-description">
-                <b><a href="https://github.com/Jss-on/IDWYP">IDWYP</a></b> is a python project</a></b> takes an image and splits it into segments, each fitting on a specified paper size. The segments are then compiled into a single PDF file.
-            </div>
-        </div>
-
-        <div class="project">
-            <img src="assets/your-face.png" alt="your-face logo" class="project-image" >
-            <div class="project-description">
-                <a href="https://github.com/Jss-on/your-face-ai"><b>YOUR</b>FACE ai </a>is a working desktop app that let you upload any facial images then get automatically recognized later. 
-            </div>
-        </div>
-
-        
-    </div>
-    <hr>
-    <br>
-    <!-- Misc Section -->
-    <div class="container pet-projects">
-        <div class="name">Misc Unsorted</div>
-        <!-- Each project entry -->
-        <div class="project">
-            <!-- <img src="assets/kira_2.png" alt="Kira UI" class="project-image"> -->
-            <div class="project-description">
-                <ul>
-                    <li>32nd ASEMEP National Technical Symposium. Team ADI awarded as Best overall industry paper. <b><a href="https://www.facebook.com/photo/?fbid=731366495674145&set=pcb.731373685673426">See here.</a></b></li>
-                    <li>SEAP 2018: My Experience. <b><a href="https://imcsap.org/my-experince-in-seap-2018/">Short sharing.</a></b></li>
-                    <li>Random shenanigans during college graduation. <b><a href="https://news.abs-cbn.com/news/03/30/19/ip-from-bukidnon-graduates-cum-laude-in-engineering">Article</a></b>, <b><a href="https://www.youtube.com/watch?v=9SlRLMMtz_o">Link.</a></b> </li>
-                </ul>
-                <!-- The rest of the project description -->
-            </div>
-            
-        </div>
-        
-        
+    <div class="footer">
+        © 2026 Jession Diwangan · Built with care
     </div>
 
 </body>
-
 </html>

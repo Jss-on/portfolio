@@ -1,0 +1,92 @@
+\documentclass{resume} % Use the custom resume.cls style
+
+\usepackage[left=0.4 in,top=0.4in,right=0.4 in,bottom=0.4in]{geometry}
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}} 
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\name{Jession Diwangan}
+
+\address{+639619580384 \\ General Trias, Cavite} 
+\address{
+ \href{mailto:jessiondiwangan@gmail.com}{Email} \\
+ \href{https://github.com/Jss-on}{Github} \\
+ \href{https://linkedin.com/in/jession-diwangan-a9162a16b}{LinkedIn}
+}
+
+\begin{document}
+
+\begin{rSection}{SKILLS}
+\begin{tabular}{@{}>{\bfseries}l@{\hspace{6ex}}p{13cm}}
+AI \& Agents & Multi-Agent Orchestration, RAG Systems, Prompt Engineering, LLM Integration (OpenAI, Claude, Gemini), Agentic Workflows, AI Automation \\
+Languages & Python, Rust, Modern C++, TypeScript, JavaScript, SQL \\
+Platforms & OpenClaw, LangGraph, LangChain, n8n, Zapier \\
+Infrastructure & Docker, GitHub Actions, CI/CD, Linux, Tailscale, REST APIs \\
+Soft Skills & Systems thinker, proactive problem-solver, high ownership, self-directed learner \\
+\end{tabular}\\
+\end{rSection}
+
+\begin{rSection}{TOOLS} 
+\begin{itemize}
+ \item OpenClaw, LangGraph, LangChain, PyTorch, LanceDB, Gemini API, OpenAI API, Claude API, Playwright, Selenium, Docker, GitHub Actions, PostgreSQL, Redis, n8n, Notion API
+\end{itemize}
+\end{rSection}
+
+\begin{rSection}{EXPERIENCE} 
+
+\textbf{AI Systems Engineer (Independent)} \hfill March 2025 - Present\\
+Multi-Agent AI Infrastructure \hfill \textit{Remote}
+ \begin{itemize}
+ \itemsep -3pt {} 
+ \item Built a \textbf{3-agent orchestration system} on OpenClaw — manager, researcher, and builder agents coordinating autonomously via session tools with human approval gates at every handoff.
+ \item Designed and deployed a \textbf{custom RAG server in Rust} with LanceDB, Gemini Embedding 2 (multimodal), hybrid search (vector + BM25), Weibull decay, noise filtering, and per-page PDF ingestion.
+ \item Integrated \textbf{Gmail automation} (OAuth2, Pub/Sub push notifications, programmatic send/read/watch) and multi-platform messaging (Telegram, Discord) with channel-based agent routing.
+ \item Built \textbf{Sharingan}, a zero-shot vision system using SigLIP2 on CUDA with REST API, enabling real-time image classification for security monitoring.
+ \item Implemented agent-to-agent communication protocols, context injection pipelines, and dynamic memory retrieval — reducing token waste by loading only relevant experiences per session.
+ \end{itemize}
+
+\textbf{Agent Developer} \hfill June 2024 - Feb 2025\\
+Arkpad \hfill \textit{Makati, Philippines}
+ \begin{itemize}
+ \itemsep -3pt {} 
+ \item Developed an \textbf{autonomous LinkedIn outreach agent} automating personalized connection requests and follow-up messaging with human-in-the-loop quality control, integrated with Slack and email.
+ \item Designed a \textbf{Sales Agent SaaS} using LangGraph — orchestrating multi-agent workflows with Agentic RAG for product knowledge, persistent memory, human-in-the-loop handoff, and Facebook Messenger integration.
+ \end{itemize}
+ 
+\textbf{AI Engineer} \hfill Dec 2023 - March 2024\\
+TresCivil \hfill \textit{New South Wales, Australia}
+ \begin{itemize}
+ \itemsep -3pt {} 
+ \item Designed an \textbf{agentic chatbot} using LangGraph with database querying, local document processing, code execution, and internet access capabilities.
+ \end{itemize}
+
+\textbf{Manufacturing Engineer for Data Science} \hfill Jan 2022 - March 2024\\
+Analog Devices, Inc \hfill \textit{General Trias, Cavite}
+ \begin{itemize}
+ \itemsep -3pt {} 
+ \item Built a \textbf{tester health monitoring system} using ensemble audio ML models deployed on OrangePi SBC to prevent IC package cracks.
+ \item Created Selenium-based \textbf{automated allocation tool}, eliminating 98\% of manual planning and \textbf{saving 3 days/week} for planners across Philippines and Thailand.
+ \item Implemented a \textbf{RAG chatbot} for technical information retrieval, improving efficiency in equipment repairs and technical reviews.
+ \end{itemize}
+
+\textbf{Test Development Engineer} \hfill Nov 2019 - Jan 2022\\
+Analog Devices, Inc \hfill \textit{General Trias, Cavite}
+ \begin{itemize}
+ \itemsep -3pt {} 
+ \item Developed test solutions for Simultaneous Sampling SAR ADC converters (characterization to manufacturing). Built LGBM model to predict parameter shifts under temperature, optimizing test time.
+ \end{itemize}
+
+\end{rSection} 
+
+\begin{rSection}{KEY PROJECTS}
+\begin{tabular}{@{}>{\bfseries}l@{\hspace{4ex}}p{13cm}}
+RAG Experience Server & Rust-based multimodal RAG with LanceDB, Gemini Embedding 2, hybrid search, Weibull decay, PDF ingestion (146-page book in 94s), 9 API endpoints \\
+OpenClaw Multi-Agent & 3-agent system (manager/researcher/builder) with autonomous coordination, Discord/Telegram routing, approval workflows \\
+Sharingan & Zero-shot vision system on SigLIP2/CUDA with REST API for real-time classification \\
+Trading Systems & HFT infrastructure in C++/Rust — crypto exchange websocket handlers, options pricing models, automated strategy optimization \\
+\end{tabular}
+\end{rSection}
+
+\begin{rSection}{Education}
+{\bf BS Electronics Engineering}, Xavier University - Ateneo de Cagayan (\textit{cum laude}) \hfill {2014 - 2019}
+\end{rSection}
+
+\end{document}
